@@ -12,4 +12,5 @@ Simple todo app built with Flask.
 ## Requirements
 
 - Flask
+- Flaskwebgui <sub><sup>(if you run desktop.py)</sup></sub>
 - Python 3.10 or newer
