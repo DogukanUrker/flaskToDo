@@ -9,6 +9,20 @@ html {
     text-align: center;
 }
 
+body::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #333745;
+}
+
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-button {
+    background: transparent;
+}
+
 a {
     text-decoration: none;
 }
