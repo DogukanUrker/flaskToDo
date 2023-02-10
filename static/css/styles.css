@@ -1,0 +1,86 @@
+html {
+    font-size: 175%;
+}
+
+* {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333745;
+    user-select: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: left;
+}
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 80% !important;
+}
+
+.btnAdd {
+    padding: 0.3rem;
+    font-size: 1rem;
+    background-color: #C8F6EA;
+    border-radius: 0.25rem;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.btnAdd:hover {
+    background-color: #B9F3E4;
+}
+
+.btnAdd:focus {
+    box-shadow: #C8F6EA;
+}
+
+.inputToDo {
+    border: 1px solid #C8F6EA;
+    border-radius: 0.25rem;
+    height: 2rem;
+    width: 80%;
+    padding: 0.25rem;
+    font-size: 1rem;
+}
+
+.inputToDo:focus {
+    outline: 2px solid #C8F6EA;
+}
+
+.notCompletedToDos, .completedToDos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todoContent {
+    width: 60%;
+    user-select: text;
+}
+
+.notCompletedToDos *, .completedToDos * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.completedToDos .todoContent {
+    text-decoration: line-through;
+    text-decoration-color: #333745;
+    text-decoration-thickness: 0.15rem;
+}
+
+.todoContent {
+    font-size: 1.25rem;
+}

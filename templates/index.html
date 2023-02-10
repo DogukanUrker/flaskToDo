@@ -1,0 +1,46 @@
+<title>flaskToDo</title>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/styles.css') }}"
+/>
+<link
+  rel="icon"
+  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✅</text></svg>"
+/>
+<body class="container">
+  <h1>Todos</h1>
+  {% for todo in todos %}{% if todo[4] == "False" %}
+  <div class="notCompletedToDos">
+    <div>
+      <a href="/check/{{todo[0]}}" class="todoStatus">🔲</a>
+    </div>
+    <p class="todoContent">{{todo[1]}}</p>
+    <p class="date">
+      {{todo[3]}} <br />
+      {{todo[2]}}
+    </p>
+    <div class="delete">
+      <a href="/delete/{{todo[0]}}" class="todoStatus">🗑️</a>
+    </div>
+  </div>
+  {% endif %}{% endfor %} {% for todo in todos %} {% if todo[4] == "True" %}
+  <div class="completedToDos">
+    <div>
+      <a href="/uncheck/{{todo[0]}}" class="todoStatus">✅</a>
+    </div>
+    <p class="todoContent">{{todo[1]}}</p>
+    <p class="date">
+      {{todo[6]}} <br />
+      {{todo[5]}}
+    </p>
+    <div class="delete">
+      <a href="/delete/{{todo[0]}}" class="todoStatus">🗑️</a>
+    </div>
+  </div>
+  {% endif %} {% endfor %}
+  <div class="add">
+    <input type="text" name="toodo" class="inputToDo" />
+    <button type="submit" class="btnAdd" onclick="todo()">add todo</button>
+  </div>
+</body>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
