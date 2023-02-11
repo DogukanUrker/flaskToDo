@@ -56,6 +56,15 @@ def uncheck(id):
     return redirect("/")
 
 
+@app.route("/edit/<int:id>/<todo>")
+def edit(id, todo):
+    connection = sqlite3.connect("todos.db")
+    cursor = connection.cursor()
+    cursor.execute(f'update todos set todo = "{todo}" where id = {id}')
+    connection.commit()
+    return redirect("/")
+
+
 @app.route("/delete/<int:id>")
 def delete(id):
     connection = sqlite3.connect("todos.db")
