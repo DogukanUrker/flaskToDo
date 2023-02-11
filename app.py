@@ -65,9 +65,8 @@ def delete(id):
     return redirect("/")
 
 
-match __name__ == "__main__":
-    case True:
-        app.run(
-            debug=True,
-            host=socket.gethostbyname(socket.gethostname()),
-        )
+if __name__ == "__main__":
+    app.run(
+        debug=True,
+        host=socket.gethostbyname(socket.gethostname()),
+    )
