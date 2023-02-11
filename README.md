@@ -1,4 +1,4 @@
-# flaskToDo
+# flaskToDo✅
 
 Simple todo app built with Flask.
 <br/>
