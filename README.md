@@ -5,9 +5,9 @@ Simple todo app built with Flask.
 [Contact](mailto:dogukanurker@icloud.com)<br/>
 [Dogukan Urker](https://dogukanurker.com)
 
-|                Desktop                |                Mobile                |
-| :-----------------------------------: | :----------------------------------: |
-| ![appDesktop](/images/appDesktop.png) | ![appMobile](/images/appMobile.jpeg) |
+|              Desktop               |              Mobile               |
+| :--------------------------------: | :-------------------------------: |
+| ![appDesktop](/images/desktop.png) | ![appMobile](/images/mobile.jpeg) |
 
 ## Requirements
 
