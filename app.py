@@ -70,6 +70,7 @@ def delete(id):
     connection = sqlite3.connect("todos.db")
     cursor = connection.cursor()
     cursor.execute(f"delete from todos where id = {id}")
+    cursor.execute(f"update sqlite_sequence set seq = seq-1")
     connection.commit()
     return redirect("/")
 
