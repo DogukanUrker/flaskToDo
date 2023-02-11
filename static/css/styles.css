@@ -115,8 +115,3 @@ h1 {
 .delete a:hover, .todoStatus:hover {
     font-size: 1.2rem;
 }
-
-/*
-background: rgb(220, 245, 198);
-background: linear-gradient(270deg, rgba(220, 245, 198, 1) 0%, rgba(198, 201, 245, 1) 100%);
-*\
