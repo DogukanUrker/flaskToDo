@@ -86,7 +86,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.notCompletedToDos, .completedToDos {
+    padding: 0.5rem;
+    transition: 0.2s;
 }
 
 .completedToDos .todoContent {
@@ -95,6 +99,24 @@ h1 {
     text-decoration-thickness: 0.15rem;
 }
 
+.completedToDos:hover, .notCompletedToDos:hover {
+    background-color: #F3FDFA;
+    border-radius: 0.5rem;
+}
+
 .todoContent {
     font-size: 1.25rem;
 }
+
+.delete, .todoStatus {
+    width: 1rem;
+}
+
+.delete a:hover, .todoStatus:hover {
+    font-size: 1.2rem;
+}
+
+/*
+background: rgb(220, 245, 198);
+background: linear-gradient(270deg, rgba(220, 245, 198, 1) 0%, rgba(198, 201, 245, 1) 100%);
+*\
