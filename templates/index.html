@@ -10,7 +10,7 @@
 <body class="container">
   <h1>Todos</h1>
   {% for todo in todos %}{% if todo[4] == "False" %}
-  <p id="todoID">{{todo[0]}}</p>
+  <p class="todoID">{{todo[0]}}</p>
   <div class="notCompletedToDos">
     <div>
       <a href="/check/{{todo[0]}}" class="todoStatus">🔲</a>

@@ -87,7 +87,7 @@ h1 {
     outline: none;
 }
 
-#todoID {
+.todoID {
     display: none;
 }
 
