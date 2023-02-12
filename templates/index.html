@@ -10,11 +10,15 @@
 <body class="container">
   <h1>Todos</h1>
   {% for todo in todos %}{% if todo[4] == "False" %}
+  <p id="todoID">{{todo[0]}}</p>
   <div class="notCompletedToDos">
     <div>
       <a href="/check/{{todo[0]}}" class="todoStatus">🔲</a>
     </div>
-    <p class="todoContent">{{todo[1]}}</p>
+    <input type="text" value="{{todo[1]}}" class="todoContent" />
+    <button class="btnSave" type="submit" onclick="editToDo()" title="save">
+      💾
+    </button>
     <p class="date">
       {{todo[3]}} <br />
       {{todo[2]}}
@@ -28,7 +32,10 @@
     <div>
       <a href="/uncheck/{{todo[0]}}" class="todoStatus">✅</a>
     </div>
-    <p class="todoContent">{{todo[1]}}</p>
+    <input type="text" value="{{todo[1]}}" class="todoContent" />
+    <button class="btnSave" type="submit" onclick="editToDo()" title="save">
+      💾
+    </button>
     <p class="date">
       {{todo[6]}} <br />
       {{todo[5]}}

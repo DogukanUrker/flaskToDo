@@ -78,6 +78,17 @@ h1 {
 .todoContent {
     width: 60%;
     user-select: text;
+    border: 0;
+    cursor: default;
+    background-color: transparent;
+}
+
+.todoContent:focus {
+    outline: none;
+}
+
+#todoID {
+    display: none;
 }
 
 .notCompletedToDos *, .completedToDos * {
@@ -111,4 +122,19 @@ h1 {
 
 .delete a:hover, .todoStatus:hover {
     font-size: 1.2rem;
+}
+
+.btnSave {
+    color: #000;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.2s;
+    font-size: 0;
+    height: fit-content;
+    margin: auto 0 auto 0;
+}
+
+.todoContent:focus+.btnSave {
+    font-size: 0.75rem;
 }
