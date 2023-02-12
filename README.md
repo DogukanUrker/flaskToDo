@@ -9,6 +9,23 @@ Simple todo app built with Flask.
 | :--------------------------------: | :-------------------------------: |
 | ![appDesktop](/images/desktop.png) | ![appMobile](/images/mobile.jpeg) |
 
+## How to install
+
+download source code from github 💾
+`git clone https://github.com/DogukanUrker/flaskToDo.git`
+
+go to directory 📁
+`cd flaskToDo`
+
+install requirements.txt 🔽
+`pip install -r requirements.txt`
+
+its ready to run 🎉
+`python app.py`
+or
+`python desktop.py`
+for run flaskToDo as a desktop app 💯
+
 ## Requirements
 
 - Flask
