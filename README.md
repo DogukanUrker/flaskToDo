@@ -9,7 +9,7 @@ Simple todo app built with Flask.
 | :--------------------------------: | :-------------------------------: |
 | ![appDesktop](/images/desktop.png) | ![appMobile](/images/mobile.jpeg) |
 
-## How to install
+## Installation
 
 download source code from github 💾
 `git clone https://github.com/DogukanUrker/flaskToDo.git`
