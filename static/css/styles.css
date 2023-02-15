@@ -33,7 +33,7 @@ h1 {
 }
 
 h6 {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     margin: 0;
 }
 
@@ -153,10 +153,14 @@ h6 {
 }
 
 .notFound {
-    font-size: 4rem;
+    font-size: 6rem;
     margin: 0;
 }
 
+.goHome {
+    font-size: 3rem;
+}
+
 .goHome:hover {
-    font-size: 2rem;
+    font-size: 6rem;
 }
