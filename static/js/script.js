@@ -8,7 +8,6 @@ function todo() {
 function editToDo() {
     var todo = document.querySelector(".todoContent").value;
     var todoID = document.querySelector(".todoID").innerHTML;
-    console.log(todoID)
     if (todo === "" || todo.replace(/\s/g, "") === "") {
     } else {
         window.location.href = `/edit/${todoID}/${todo}`;
