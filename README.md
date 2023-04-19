@@ -9,12 +9,12 @@ Simple todo app built with Flask.
 | :--------------------------------: | :-------------------------------: |
 | ![appDesktop](/images/desktop.png) | ![appMobile](/images/mobile.jpeg) |
 
-## Requirements
+## Requirements 📦
 
 - Flask
 - Flaskwebgui <sub><sup>(if you run desktop.py)</sup></sub>
 
-## Installation
+## Installation ⬇️
 
 download source code from Github 💾
 `git clone https://github.com/DogukanUrker/flaskToDo.git`
@@ -31,12 +31,12 @@ or
 `python desktop.py`
 for run flaskToDo as a desktop app 💯
 
-#### Contributors
+### Contributors 💕
 
 <a href="https://github.com/dogukanurker/flasktodo/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=dogukanurker/flasktodo" />
 </a>
 
-#### Support
+### Support 💰
 
 <a href="https://www.buymeacoffee.com/dogukanurker" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
