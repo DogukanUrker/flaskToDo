@@ -33,9 +33,7 @@ for run flaskToDo as a desktop app 💯
 
 ### Contributors 💕
 
-<a href="https://github.com/dogukanurker/flasktodo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=dogukanurker/flasktodo" />
-</a>
+<a href="https://github.com/dogukanurker"><img src="https://avatars.githubusercontent.com/u/62756402" title="ngryman" width="80" height="80"></a>
 
 ### Support 💰
 
