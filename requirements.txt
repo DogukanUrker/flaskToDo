@@ -1,2 +1,2 @@
-Flask==2.2.2
+Flask==3.0.2
 flaskwebgui==1.0.3
