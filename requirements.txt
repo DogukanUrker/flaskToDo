@@ -1,2 +1,2 @@
-flaskwebgui==1.1.3
+flaskwebgui==1.1.4
 Flask==3.0.3
