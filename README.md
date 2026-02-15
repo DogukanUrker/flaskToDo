@@ -38,3 +38,14 @@ for run flaskToDo as a desktop app 💯
 ### Support 💰
 
 <a href="https://dogukanurker.com/donate" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+# Flask ToDo - SonarQube Code Analysis
+
+## Repository Details
+- **Language**: Python (Flask)
+- **Lines of Code**: 500+ LOC
+- **Description**: Flask-based ToDo application
+
+## Docker Instructions
+```bash
+docker build -t flask-todo .
+docker run -p 5000:5000 flask-todo

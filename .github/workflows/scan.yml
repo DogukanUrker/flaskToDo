@@ -1,0 +1,11 @@
+﻿name: SonarQube Check
+on: [push, pull_request]
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: SonarSource/sonarqube-scan-action@v3
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: http://localhost:9000
