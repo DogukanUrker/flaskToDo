@@ -1,13 +1,15 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 # /// = relative path, //// = absolute path
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+app.config['SECRET_KEY'] = 'dev-secret-key-change-in-production'
 
 db = SQLAlchemy(app)
+csrf = CSRFProtect(app)
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -35,23 +37,30 @@ def todo(todo_id):
 
 @app.post("/add")
 def add():
-    title = request.form.get("title")
+    title = request.form.get("title", "").strip()
+    if not title:
+        flash("Title cannot be empty.", "error")
+        return redirect(url_for("list"))
+    if len(title) > 100:
+        flash("Title must be 100 characters or fewer.", "error")
+        return redirect(url_for("list"))
     new_todo = Todo(title=title, complete=False)
     db.session.add(new_todo)
     db.session.commit()
     return redirect(url_for("list"))
 
 
-@app.get("/update/<int:todo_id>")
+@app.post("/update/<int:todo_id>")
 def update(todo_id):
-    todo = db.session.query(Todo).filter(Todo.id == todo_id).first()
+    todo = db.get_or_404(Todo, todo_id)
     todo.complete = not todo.complete
     db.session.commit()
     return redirect(url_for("list"))
 
 
-@app.get("/delete/<int:todo_id>")
+@app.post("/delete/<int:todo_id>")
 def delete(todo_id):
-    todo = db.session.query(Todo).filter(Todo.id == todo_id).first()
+    todo = db.get_or_404(Todo, todo_id)
     db.session.delete(todo)
+    db.session.commit()
     return redirect(url_for("list"))

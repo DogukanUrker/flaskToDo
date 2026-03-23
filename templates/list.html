@@ -14,10 +14,21 @@
     <div style="margin-top: 50px;" class="ui container">
         <h1 class="ui center aligned header">To Do App</h1>
 
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="ui {{ 'red' if category == 'error' else 'green' }} message">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
         <form class="ui form" action="/add" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <div class="field">
                 <label>Todo Title</label>
-                <input type="text" name="title" placeholder="Enter Todo..."><br>
+                <input type="text" name="title" placeholder="Enter Todo..." maxlength="100" required><br>
             </div>
             <button class="ui blue button" type="submit">Add</button>
         </form>
@@ -34,8 +45,14 @@
             <span class="ui green label">Completed</span>
             {% endif %}
 
-            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
-            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
+            <form method="post" action="/update/{{ todo.id }}" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="ui blue button" type="submit">Update</button>
+            </form>
+            <form method="post" action="/delete/{{ todo.id }}" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="ui red button" type="submit">Delete</button>
+            </form>
         </div>
         {% endfor %}
         

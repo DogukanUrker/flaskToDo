@@ -23,8 +23,14 @@
             <span class="ui green label">Completed</span>
             {% endif %}
 
-            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
-            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
+            <form method="post" action="/update/{{ todo.id }}" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="ui blue button" type="submit">Update</button>
+            </form>
+            <form method="post" action="/delete/{{ todo.id }}" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="ui red button" type="submit">Delete</button>
+            </form>
         </div>
         
         <hr>
